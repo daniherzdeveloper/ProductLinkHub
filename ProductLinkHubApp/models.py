@@ -48,5 +48,5 @@ class Product(models.Model):
         verbose_name_plural = "Products"
 
 class ImagenFondo(models.Model):
-    imagen = models.ImageField(upload_to="ProductoLinkHubApp")
+    imagen = models.ImageField(upload_to="ProductoLinkHubApp/imagenes_fondo")
     enlace = models.URLField(blank=True, null=True)
