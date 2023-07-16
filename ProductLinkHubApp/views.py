@@ -13,7 +13,7 @@ class MejorRelacionCalidadPrecio(TemplateView):
         context = super().get_context_data(**kwargs)
 
         subcategoria = SubCategorias.objects.get(pk=7)
-        productos = subcategoria.product_set.filter(disponible=True)
+        productos = subcategoria.product_set.filter(disponible=True).order_by('pk')
         imagenes = ImagenFondo.objects.all()
         
         paginator = Paginator(productos, self.paginate_by)  # Objeto Paginator
@@ -44,7 +44,7 @@ class MasVendidosGenerales(TemplateView):
         context = super().get_context_data(**kwargs)
 
         subcategoria = SubCategorias.objects.get(pk=pk)
-        productos = subcategoria.product_set.filter(disponible=True)
+        productos = subcategoria.product_set.filter(disponible=True).order_by('pk')
         categoria = subcategoria.categoria
         
         paginator = Paginator(productos, self.paginate_by)  # Objeto Paginator
