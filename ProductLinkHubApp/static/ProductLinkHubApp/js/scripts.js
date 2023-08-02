@@ -30,4 +30,70 @@ window.onscroll = function () {
 
 
 
+// obtiene la lista de link e imagenes para el fondo
+
+const jumbotron = document.querySelector('.jumbotron');
+const prevButton = document.querySelector('.prev-button');
+const nextButton = document.querySelector('.next-button');
+
+
+// obtiene la lista a traves de la url
+fetch('/imagen-fondo/')  // Reemplaza esto con la URL correcta
+    .then(response => response.json())
+    .then(data => {
+        let currentIndex = 0;
+        
+        function setBackgroundImageAndLink() {
+        const currentImageAndLink = data.url_imagenes[currentIndex];
+        jumbotron.style.backgroundImage = `url('${currentImageAndLink.imagen}')`;
+
+        jumbotron.addEventListener('click', function (event) {
+            if (event.target === jumbotron) {
+            window.location.href = currentImageAndLink.enlace;
+            }
+        });
+        }
+
+        function showPreviousImage() {
+        currentIndex = (currentIndex - 1 + data.url_imagenes.length) % data.url_imagenes.length;
+        setBackgroundImageAndLink();
+        }
+
+        function showNextImage() {
+        currentIndex = (currentIndex + 1) % data.url_imagenes.length;
+        setBackgroundImageAndLink();
+        }
+
+        prevButton.addEventListener('click', showPreviousImage);
+        nextButton.addEventListener('click', showNextImage);
+
+        function startAutomaticChange() {
+        intervalId = setInterval(showNextImage, 5000);
+        }
+
+        // Llamar a la función para establecer la imagen de fondo y el enlace inicialmente
+        setBackgroundImageAndLink();
+
+        // Iniciar el cambio automático de imágenes
+        startAutomaticChange();
+        
+        
+    })
+    .catch(error => {
+        console.error('Hubo un error:', error);
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

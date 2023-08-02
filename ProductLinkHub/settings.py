@@ -65,7 +65,6 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'ProductLinkHubApp.context_processors.categorias',
-                'ProductLinkHubApp.context_processors.imagenfondo',
             ],
         },
     },

@@ -2,6 +2,7 @@ from django.views.generic import TemplateView
 from .models import SubCategorias, ImagenFondo
 from django.utils.safestring import mark_safe
 from django.core.paginator import Paginator
+from django.http import JsonResponse
 
 # Create your views here.
 
@@ -61,3 +62,13 @@ class MasVendidosGenerales(TemplateView):
         context['categoria'] = categoria
 
         return context
+
+
+def imagenfondo(request):
+    imagenes = ImagenFondo.objects.all()
+    url_imagenes = []
+    
+    for imagen in imagenes:
+        url_imagenes.append({"imagen": imagen.imagen.url, "enlace": imagen.enlace})
+     
+    return JsonResponse({'url_imagenes': url_imagenes})
