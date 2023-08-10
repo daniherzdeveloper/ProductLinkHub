@@ -49,7 +49,7 @@ class Product(models.Model):
 
 class ImagenFondo(models.Model):
     imagen = models.ImageField(upload_to="ProductLinkHubApp/media/imagenes_fondo")
-    enlace = models.URLField(blank=True, null=True)
+    enlace = models.TextField(blank=True, null=True)
 
 class SubCategoriaSeccion(models.Model):
     nombre = models.CharField(max_length=150)
