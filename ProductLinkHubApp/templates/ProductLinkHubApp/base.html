@@ -63,6 +63,25 @@
     {% block content %}
 
     {% endblock content %}
+
+    <section class="section" style="background-color: #303b47;">
+        <div class="container">
+            <div class="row">
+                {% for subcategoria in subcategoriaseccion %}
+                    <div class="col-md-2">
+                        <div class="category-links text-center mb-4">
+                            <a href="{{subcategoria.url}}" class="d-block my-3">{{subcategoria}}</a>
+                        </div>
+                    </div>
+                {% endfor %}
+                <!-- Agrega más categorías utilizando la misma estructura -->
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    
     <!-- Pie de página -->
     <footer class="footer">
         <div class="container">

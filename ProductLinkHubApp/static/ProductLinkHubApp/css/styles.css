@@ -296,3 +296,14 @@ width: auto; /* Esto asegurará que el ancho se ajuste proporcionalmente al camb
 .social-icon:hover {
     background-color: #f0f0f0;
 }
+
+
+.category-links a {
+    color: #dddcdc;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.category-links a:hover {
+    text-decoration: underline;
+}

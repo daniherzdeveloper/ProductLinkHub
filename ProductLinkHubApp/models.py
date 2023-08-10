@@ -50,3 +50,14 @@ class Product(models.Model):
 class ImagenFondo(models.Model):
     imagen = models.ImageField(upload_to="ProductLinkHubApp/media/imagenes_fondo")
     enlace = models.URLField(blank=True, null=True)
+
+class SubCategoriaSeccion(models.Model):
+    nombre = models.CharField(max_length=150)
+    url = models.URLField()    
+
+    def __str__(self):
+        return f"{self.nombre}"
+
+    class Meta:
+        verbose_name = 'SubCategoriaSeccion'
+        verbose_name_plural = 'SubCategoriaSeccions'

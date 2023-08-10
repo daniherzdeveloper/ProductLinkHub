@@ -21,10 +21,14 @@ class AdminImagenFondo(admin.ModelAdmin):
     list_display = ['enlace', 'imagen']
     list_display_links = ['enlace']
 
+class AdminSubCategoriaSeccion(admin.ModelAdmin):
+    list_display = ['nombre', ]
+
 
 admin.site.register(Categorias, AdminCategorias)
 admin.site.register(SubCategorias, AdminSubCategorias)
 admin.site.register(Product, AdminProduct)
 admin.site.register(ImagenFondo, AdminImagenFondo)
+admin.site.register(SubCategoriaSeccion, AdminSubCategoriaSeccion)
 
 
