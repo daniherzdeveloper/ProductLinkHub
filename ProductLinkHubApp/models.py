@@ -18,7 +18,7 @@ class SubCategorias(models.Model):
     nombre = models.CharField(max_length=100)
     categoria = models.ForeignKey(Categorias, on_delete=models.CASCADE)
     disponible = models.BooleanField(default=True)
-    url = models.URLField()
+    url_texto = models.TextField(null=True, blank=True)
 
     def __str__(self):
         return f"{self.nombre}"
@@ -53,7 +53,7 @@ class ImagenFondo(models.Model):
 
 class SubCategoriaSeccion(models.Model):
     nombre = models.CharField(max_length=150)
-    url = models.URLField()    
+    url_texto = models.TextField(null=True, blank=True)    
 
     def __str__(self):
         return f"{self.nombre}"

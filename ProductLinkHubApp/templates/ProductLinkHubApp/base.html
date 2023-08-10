@@ -46,7 +46,7 @@
                                 <a class="dropdown-item" role="button">{{categoria}}</a>
                                 <ul class="dropdown-menu">
                                         {% for subcategoria in categoria.subcategorias_set.all %}
-                                            <li><a class="dropdown-item" href="{{subcategoria.url}}{{subcategoria.pk}}">{{subcategoria}}</a></li>
+                                            <li><a class="dropdown-item" href="{{subcategoria.url_texto}}{{subcategoria.pk}}">{{subcategoria}}</a></li>
                                         {% endfor %}
                                 </ul>
                             </li>
@@ -70,7 +70,7 @@
                 {% for subcategoria in subcategoriaseccion %}
                     <div class="col-md-2">
                         <div class="category-links text-center mb-4">
-                            <a href="{{subcategoria.url}}" class="d-block my-3">{{subcategoria}}</a>
+                            <a href="{{subcategoria.url_texto}}" class="d-block my-3">{{subcategoria}}</a>
                         </div>
                     </div>
                 {% endfor %}
