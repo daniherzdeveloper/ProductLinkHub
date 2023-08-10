@@ -24,11 +24,15 @@ class AdminImagenFondo(admin.ModelAdmin):
 class AdminSubCategoriaSeccion(admin.ModelAdmin):
     list_display = ['nombre', ]
 
+class AdminProductSubCategoriaSeccion(admin.ModelAdmin):
+    list_display = ['product', 'subcategorias_seccion', 'disponible']
+
 
 admin.site.register(Categorias, AdminCategorias)
 admin.site.register(SubCategorias, AdminSubCategorias)
 admin.site.register(Product, AdminProduct)
 admin.site.register(ImagenFondo, AdminImagenFondo)
 admin.site.register(SubCategoriaSeccion, AdminSubCategoriaSeccion)
+admin.site.register(ProductSubCategoriaSeccion, AdminProductSubCategoriaSeccion)
 
 

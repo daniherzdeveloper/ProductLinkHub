@@ -61,3 +61,20 @@ class SubCategoriaSeccion(models.Model):
     class Meta:
         verbose_name = 'SubCategoriaSeccion'
         verbose_name_plural = 'SubCategoriaSeccions'
+
+class ProductSubCategoriaSeccion(models.Model):
+    product = models.TextField()
+    subcategoria_seccion = models.ManyToManyField(SubCategoriaSeccion)
+    disponible = models.BooleanField(default=True)
+
+    def subcategorias_seccion(self):
+        subcategorias_seccion = self.subcategoria_seccion.all()
+        lista_subcategorias_seccion_totales = []
+
+        for subcategoria_seccion in subcategorias_seccion:
+            lista_subcategorias_seccion_totales.append(subcategoria_seccion)
+        return lista_subcategorias_seccion_totales 
+
+    class Meta():
+        verbose_name = "ProductSubCategoriaSeccion"
+        verbose_name_plural = "ProductSubCategoriaSeccions"
