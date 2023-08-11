@@ -1,0 +1,9 @@
+*.jpg
+*.jpeg
+*.png
+*.env
+
+/venv/
+/media/
+/migrations/
+/__pycache__/
