@@ -307,3 +307,7 @@ width: auto; /* Esto asegurará que el ancho se ajuste proporcionalmente al camb
 .category-links a:hover {
     text-decoration: underline;
 }
+
+.parrafo-acercade {
+    color: #dddcdc;
+}
