@@ -27,5 +27,4 @@ urlpatterns = [
     path('los-mas-vendidos-generales/<int:pk>', MasVendidosGenerales.as_view(), name="mas_vendidos_generales"),
     path('imagen-fondo/', imagenfondo, name="imagen_fondo"),
     path('ofertas-especiales/<int:pk>', OfertasEspeciales.as_view(), name="ofertas_especiales"),
-    # path('buscar/', imprimir_iframes, name='buscar_productos'),
 ] + static(settings.MEDIA_URL, document_root=settings.BASE_DIR)
