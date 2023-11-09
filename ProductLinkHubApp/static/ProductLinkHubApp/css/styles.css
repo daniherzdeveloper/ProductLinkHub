@@ -1,0 +1,313 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.navbar {
+background-color: #ffffff !important; /* Cambia el color de fondo a blanco */
+transition: top 0.3s;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-link {
+    color: #2e2828;
+    font-size: 16px;
+}
+
+.nav-link:hover {
+color: rgb(103, 129, 243); /* Cambia el color a amarillo al pasar el mouse por encima */
+}
+
+.navbar-toggler {
+background-color: black;
+border-color: black;
+/* Agrega estilos adicionales según tus preferencias */
+padding: 10px;
+border-radius: 5px;
+transition: background-color 0.3s ease;
+}
+
+.navbar-toggler:hover {
+    background-color: rgb(56, 56, 66); /* Cambia el color de fondo al pasar el mouse por encima */
+}
+
+.jumbotron {
+position: relative;
+background-color: #f8f9fa;
+padding: 20px;
+border-radius: 5px;
+text-align: center;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+background-repeat: no-repeat;
+background-size: cover;
+cursor: pointer;
+transition: background-image 0.5s ease; /* Agrega la transición a la propiedad background-image */
+}
+
+.jumbotron-content {
+margin-top: 30%;
+}
+
+.jumbotron-buttons {
+position: relative;
+top: 10px;
+display: flex;
+justify-content: space-between;
+margin-bottom: 20px;
+padding: 0;
+}
+
+.jumbotron-buttons button {
+font-size: 24px; /* Aumenta el tamaño del símbolo a 24px */
+background-color: transparent;
+color: #fff;
+border: none;
+border-radius: 3px;
+padding: 10px 20px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+text-transform: uppercase;
+}
+
+.jumbotron-buttons button:hover {
+/* background-color: #000; */
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.jumbotron-buttons button:hover i {
+color: blue !important; /* Cambia el color del ícono al colocar el cursor encima */
+}
+
+
+
+.card {
+    border: none;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 16px;
+    color: #6c757d;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.form-control {
+    width: 300px; /* Ajusta el ancho del input de búsqueda según tus necesidades */
+    margin-right: 10px;
+}
+
+.btn-buscar {
+    background-color: blue; /* Cambia el color de fondo a azul */
+    color: white; /* Cambia el color del texto a blanco */
+}
+
+.btn-buscar:hover {
+    color: white;
+    background-color: rgb(115, 106, 252); /* Cambia el color a amarillo al pasar el mouse por encima */
+}
+
+/* Estilos para el pie de página */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer .contact-info {
+    font-size: 18px;
+}
+
+.footer .contact-info a {
+    color: #fff;
+}
+
+.footer .contact-info a:hover {
+    text-decoration: underline;
+}
+
+.footer h5 {
+font-size: 20px !important; /* Ajusta el tamaño según tus preferencias */
+}
+
+/* Estilos para el menú desplegable */
+.dropdown-submenu {
+    position: relative;
+}
+
+.categorias-menu .dropdown-menu {
+    display: none;
+}
+
+.categorias-menu .dropdown-submenu > .dropdown-menu {
+    display: none;
+}
+
+.categorias-menu .dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-submenu .dropdown-submenu > .dropdown-toggle::after {
+    content: "▸";
+    font-size: 10px;
+    transform: rotate(0);
+}
+
+.dropdown-submenu.show > .dropdown-toggle::after {
+    transform: rotate(-90deg);
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+}
+
+
+.dropdown-submenu > a:after {
+    display: inline-block;
+    margin-left: 4px;
+    vertical-align: middle;
+    content: "▸";
+    font-size: 10px;
+    transform: rotate(90deg);
+}
+
+.dropdown-submenu .dropdown-submenu > a:after {
+    content: "▸";
+    font-size: 10px;
+    transform: rotate(0);
+}
+
+.dropdown-submenu.show > a:after {
+    transform: rotate(-90deg);
+}
+
+/* Agregar estilos CSS personalizados */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+    left: auto;
+    right: 100%;
+    margin-top: -1px;
+    margin-left: -1px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 5px;
+}
+
+.dropdown-menu {
+   left: auto;
+   right: 0%;
+   margin-top: -1px;
+   margin-left: -1px;
+   -webkit-border-radius: 0px;
+   -moz-border-radius: 0px;
+   border-radius: 5px; 
+}
+
+.logo {
+/* width: 180px; Ancho deseado */
+/* height: 40px; Alto deseado */
+/* object-fit: cover !important; Otra opción: contain  */
+
+height: auto; /* Ajusta este valor según tus necesidades */
+width: auto; /* Esto asegurará que el ancho se ajuste proporcionalmente al cambio de altura */
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.social-icon i {
+    font-size: 20px;
+}
+
+.social-icon.facebook {
+    color: #1877F2;
+}
+
+.social-icon.twitter {
+    color: #1DA1F2;
+}
+
+.social-icon.instagram {
+    color: #E4405F;
+}
+
+.social-icon:hover {
+    background-color: #f0f0f0;
+}
+
+
+.category-links a {
+    color: #dddcdc;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.category-links a:hover {
+    text-decoration: underline;
+}
+
+.parrafo-acercade {
+    color: #dddcdc;
+}
