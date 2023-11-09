@@ -1,0 +1,13 @@
+*.jpg
+*.jpeg
+*.png
+*.env
+
+
+ProductLinkHubApp/media/
+ProductLinkHubApp/migrations/
+ProductLinkHub/__pycache__/
+ProductLinkHubApp/__pycache__/
+
+
+
